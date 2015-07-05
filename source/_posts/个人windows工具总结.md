@@ -53,6 +53,24 @@ import-module PsGet
 
 安装了Powershell Community Extension后可以Invoke-batch，也可以直接Import-visualstudiovars来加载vs编译器的环境变量，这样就不需要先从一个bat文件启动conEmu了。windows的运行（WIN+R）可以直接启动快捷方式文件，比如环境变量目录中有cbjps.lnk，只需要WIN+R，然后cbjps即可启动快捷方式对应的程序。不过注册表右键菜单对应项需要直接指向原始exe文件才行。
 
+```powershell
+$env:PATH += ";C:\Program Files\iojs\" 
+$env:PATH += ";" + $env:APPDATA + "\npm"
+$env:PATH += ";C:\Python27\" 
+$env:PATH += ";C:\Python27\scripts\"
+# Invoke-BatchFile "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" x64
+function vs {
+    Import-VisualStudioVars 2013 x64
+}
+$env:JAVA_HOME='C:\Program Files\Java\jdk1.8.0_20'
+set-alias 'vi' 'gvim'
+set-alias 'gradle' 'D:\chenbojian\cbjtool\gradle-2.4\bin\gradle.bat'
+set-alias 'mvn' 'D:\chenbojian\cbjtool\apache-maven-3.3.3\bin\mvn.cmd'
+import-module PsGet
+
+# Load posh-git example profile
+. 'C:\Users\johr\Documents\WindowsPowerShell\Modules\posh-git\profile.example.ps1'
+```
 
 
 未完待续。。。
