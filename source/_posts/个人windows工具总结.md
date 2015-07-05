@@ -49,6 +49,10 @@ import-module PsGet
 
 据说Powershell Community Extension可以解决问题，有个Invoke-batch命令可以从bat文件读取环境变量，有空研究下。
 
+### update
+
+安装了Powershell Community Extension后可以Invoke-batch，也可以直接Import-visualstudiovars来加载vs编译器的环境变量，这样就不需要先从一个bat文件启动conEmu了。windows的运行（WIN+R）可以直接启动快捷方式文件，比如环境变量目录中有cbjps.lnk，只需要WIN+R，然后cbjps即可启动快捷方式对应的程序。不过注册表右键菜单对应项需要直接指向原始exe文件才行。
+
 
 
 未完待续。。。
