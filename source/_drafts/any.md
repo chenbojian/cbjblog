@@ -3,9 +3,39 @@ tags:
 ---
 
 ## tomcat8配置中注意事项
+
 - servlet-name=default的通常用来处理静态资源,比如会让url-pattern=*.html的资源交给其处理.
 - welcome-file-list配置是决定访问以/结尾的url时如何响应,tomcat默认conf/web.xml中配置了index.html等,如果自己项目中没有配置的话就按照默认配置.
 - /默认已被welcom-file-list配置处理,写controller时如果RequestMapping到/位置需要注意
+- 使用Spring接管/之后静态资源可以通过spring配置mvc:default-servlet-handler来处理,这样不会出现异常错误
+- 当Spring接管了/之后,不应该在其前面再配置让default接管*.html之类的来处理静态资源,这样会导致所有的/路径无法调用spring处理,会被default优先处理掉,正确的方法如上,下面是错误和正确的示例.
+
+错误的配置
+```xml
+<servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.html</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>appServlet</servlet-name>
+    <url-pattern>/</url-pattern>
+</servlet-mapping>
+
+```
+这种错误配置的情况,加上一个空的`<welcome-file-list><welcome-file></welcome-file></welcome-file-list>`虽然可以解决/被default接管的问题,但这并不是很好的解决方法.
+
+正确的配置
+```xml
+<--! web.xml中 -->
+<servlet-mapping>
+    <servlet-name>appServlet</servlet-name>
+    <url-pattern>/</url-pattern>
+</servlet-mapping>
+
+<--! spring-servlet.xml中 -->
+<mvc:default-servlet-handler />
+```
 
 
 ## 持续集成工具
