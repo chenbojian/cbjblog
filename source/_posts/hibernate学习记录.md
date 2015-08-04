@@ -31,6 +31,24 @@ persist后也会执行insert语句,但会改变user的状态为persistent,user.i
 ## orphanRemoval=true 与 cascade=CascadeType.DELETE
 孤值删除包括了级联删除的情况. 同时孤值删除还会处理额外的情况, 当断开关系后update时会自动删除有外键的一方.
 
+## hibernate继承
+注解方式example
+```java
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "field", discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorValue("dummy")
+public class EntitySuperClass {
+// here definitions go 
+// but don't define discriminator column here
+}
+
+@Entity
+@DiscriminatorValue(value="sub1")
+public class Sub1Class extends EntitySuperClass {
+// here definitions go
+}
+```
 
 
 未完待续...

@@ -63,13 +63,13 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-#theme: metro-light
-theme: landscape
+theme: metro-light
+#theme: landscape
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/chenbojian/chenbojian.github.io.git
+  repo: git@github.com:chenbojian/chenbojian.github.io.git
 branch: master
 message: blog update
