@@ -5,7 +5,8 @@ tags:
 
 ## ConEmu
 
-终于不用忍受原始cmd或者powershell难看的界面和难看的字体了。  
+终于不用忍受原始cmd或者powershell难看的界面和难看的字体了。
+
 目前存在一个小问题，我之前一般会把常用的环境变量配置在一个bat文件中，比如cbjps.bat，每次要启动命令行只需要WIN+R，然后输入cbjps即可解决。之前的bat代码如下：
 
 ```bat
