@@ -1,6 +1,6 @@
 title: hibernate orphanRemoval and cascade
 date: 2015-07-03 17:02:48
-tags:
+tags: hibernate
 ---
 
 [查看原文](http://stackoverflow.com/questions/18813341/what-is-the-difference-between-cascade-and-orphan-removal-from-db)

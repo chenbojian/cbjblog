@@ -1,6 +1,9 @@
 title: hibernate学习记录
 date: 2015-07-06 15:15:20
-tags:
+tags: 
+- hibernate
+- database
+
 ---
 
 ## merge 与 update
@@ -63,7 +66,7 @@ public class Sub1Class extends EntitySuperClass {
 ```
 
 
-## hibernate在jsp中lazyloading失效的神奇解决方法
+## hibernate在jsp中lazyloading失效的解决方法
 
 配置enable_lazy_load_no_trans为true
 
