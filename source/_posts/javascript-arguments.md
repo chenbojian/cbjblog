@@ -152,13 +152,14 @@ console.log(x, y);
 
 ，可以对数组解构，也可以对对象结构，那么对象的解构是什么样的呢？
 ```javascript
-var {foo, bar, zoo = 7} = {foo: 'aaa', bar: 'bbb'};
-console.log(foo);
-console.log(bar); 
-console.log(zoo); 
-var {bar: bzz, foo: fzz} = {foo: 'aaa', bar: 'bbb'};
-console.log('fzz=', fzz);
-console.log('bzz=', bzz);
+var {foo: x, bar: y} = {foo: 'aaa', bar: 'bbb'};
+console.log(x);
+console.log(y); 
+
+var { prop, prop2} = {prop: 5, prop2: 10};
+console.log(prop, prop2);
+
+
 ```
 那么函数的参数也可以写成这样的形式
 ```javascript
@@ -170,4 +171,26 @@ foo({}) // undefined, 5
 foo({x: 1}) // 1, 5
 foo({x: 1, y: 2}) // 1, 2
 foo() // TypeError: Cannot read property 'x' of undefined
+```
+解构有很多用途，比如可以做这种事情
+```javascript
+var something = [
+    {url: 'baidu.com'},
+    {url: 'google.com'},
+    {url: 'facebook.com'}
+];
+//pluck
+var urls = something.map(({ url }) => url);
+console.log(urls);
+```
+但对象的解构需要注意，如果将声明与实现分开，需要将表达式放置于括号中
+```javascript
+var a, b;
+{a,b} = {a:3,b:4};
+console.log(a,b);
+//error
+
+var a, b;
+({a,b} = {a:3,b:4});
+console.log(a,b);
 ```
