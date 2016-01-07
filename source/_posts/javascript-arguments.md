@@ -128,7 +128,7 @@ var a = 3, b = 4;
 console.log(a, b);
 ```
 用过python或者ruby的同学对这种写法一定已经非常熟悉了，现在ES6也支持这种fancy的特性了，这种语法被叫做解构
-```javascritp
+```javascript
 var [a, [[b], c]] = [1, [[2], 3]];
 console.log(a,b,c);
 var [ , , third] = ["foo", "bar", "baz"];
@@ -150,7 +150,7 @@ var [x = 3, y = 4] = [undefined, 1]
 console.log(x, y);
 ```
 
-，可以对数组解构，也可以对对象结构，那么对象的解构是什么样的呢？
+可以对数组解构，也可以对对象结构，那么对象的解构是什么样的呢？
 ```javascript
 var {foo: x, bar: y} = {foo: 'aaa', bar: 'bbb'};
 console.log(x);
