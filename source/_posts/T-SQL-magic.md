@@ -34,6 +34,16 @@ select * from sysarticles where pubid = 3
 - [Replication infomation](https://msdn.microsoft.com/en-us/library/dn198334.aspx)
 - [Replication stored procedure](https://msdn.microsoft.com/en-us/library/ms174364.aspx)
 
+## Useful replication stored procedure.
+
+
+## How to close connect and drop db in sql server?
+
+```sql
+alter database [dbname] set SINGLE_USER with rollback immediate
+drop database [dbname]
+```
+
 ## Other collections
 
 - [SqlServer important queries](http://www.c-sharpcorner.com/article/50-important-queries-in-sql-server/)
