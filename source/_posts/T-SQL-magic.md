@@ -35,7 +35,17 @@ select * from sysarticles where pubid = 3
 - [Replication stored procedure](https://msdn.microsoft.com/en-us/library/ms174364.aspx)
 
 ## Useful replication stored procedure.
+```sql
+exec sp_dropsubscription
+    @publication='**-Publication',
+    @article= N'all',
+    @subscriber = 'WIN-VPE**FSH8IJ'
 
+exec sp_droppublication
+    @publication='**-Publication'
+
+exec sp_removedbreplication @dbname='**-local' 
+```
 
 ## How to close connect and drop db in sql server?
 
