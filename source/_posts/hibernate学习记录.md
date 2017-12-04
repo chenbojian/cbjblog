@@ -1,3 +1,4 @@
+---
 title: hibernate学习记录
 date: 2015-07-06 15:15:20
 tags: 

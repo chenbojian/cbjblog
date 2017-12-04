@@ -1,3 +1,4 @@
+---
 title: javascript-arguments
 date: 2016-01-06 20:40:17
 tags:

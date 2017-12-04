@@ -1,3 +1,4 @@
+---
 title: T-SQL magic
 date: 2016-11-04 17:39:23
 tags:

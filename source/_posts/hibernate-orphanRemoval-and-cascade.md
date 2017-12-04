@@ -1,3 +1,4 @@
+---
 title: hibernate orphanRemoval and cascade
 date: 2015-07-03 17:02:48
 tags: hibernate
