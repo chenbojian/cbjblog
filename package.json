@@ -6,7 +6,7 @@
     "update:theme": "rm -rf themes/next && git clone https://github.com/iissnan/hexo-theme-next themes/next"
   },
   "hexo": {
-    "version": "3.4.2"
+    "version": "3.8.0"
   },
   "dependencies": {
     "hexo": "^3.8.0",
