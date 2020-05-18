@@ -71,5 +71,5 @@ theme: next
 deploy:
   type: git
   repo: git@github.com:chenbojian/chenbojian.github.io.git
-branch: master
-message: blog update
+  branch: master
+  message: blog update
