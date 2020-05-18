@@ -14,7 +14,7 @@
 .sidebar-inner {
 //padding: 20px 10px 0;
   box-sizing: border-box;
-  width: $sidebar-desktop;
+  width: 240px;
   color: $text-color;
   background: white;
   box-shadow: $box-shadow;
@@ -41,8 +41,7 @@
   clearfix();
 }
 
-.sidebar a,
-.sidebar .exturl {
+.sidebar a {
   color: $black-light;
 
   &:hover { color: $black-deep; }
@@ -53,8 +52,8 @@
 }
 
 .links-of-author-item {
-  a:before, .exturl:before { display: none; }
-  a, .exturl {
+  a:before { display: none; }
+  a {
     border-bottom: none;
     text-decoration: underline;
   }
@@ -84,15 +83,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  .exturl {
-    font-size: 13px;
-  }
 }
 .links-of-author-item {
   sidebar-inline-links-item();
 
-  a, .exturl {
+  a {
     display: block;
     text-decoration: none;
 
