@@ -1,5 +1,5 @@
 ---
-title: how to make powershell remoting to windows work on linux
+title: How to make powershell remoting to windows work on linux
 date: 2020-05-21 15:12:20
 tags:
 ---
